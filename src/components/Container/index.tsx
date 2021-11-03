@@ -7,10 +7,10 @@ export interface Props extends BaseProps {
   direction?: 'horizontal' | 'vertical'
 }
 
-const Container: FC<Props> = ({ styles, children, isFullWidth, direction =  'horizontal', isHidden }) => {
+const Container: FC<Props> = ({ styles, children, isFullWidth, direction =  'horizontal', className = '', isHidden }) => {
   if (isHidden) return null
 
-  return <Styled styles={styles} direction={direction} isFullWidth={isFullWidth}>{children}</Styled>
+  return <Styled styles={styles} direction={direction} isFullWidth={isFullWidth} className={className}>{children}</Styled>
 }
 
 export default Container

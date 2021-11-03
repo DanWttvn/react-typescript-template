@@ -12,7 +12,7 @@ export interface Props extends BaseProps {
   isLoading?: boolean
 }
 
-const Button: FC<Props> = forwardRef(({ children, onClick, variant = 'A', styles, isDisabled, isSelected, type = 'button', isLoading, className, isHidden }, ref) => {
+const Button: FC<Props> = forwardRef(({ children, onClick, variant = 'A', styles, isDisabled, isSelected, type = 'button', isLoading, className = '', isHidden }, ref) => {
   if (isHidden) return null
 
   let Styled

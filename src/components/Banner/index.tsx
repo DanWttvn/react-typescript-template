@@ -6,7 +6,7 @@ export interface Props extends BaseProps {
   isShown?: boolean
 }
 
-const Banner: FC<Props> = ({ children, isShown = false, styles, className, isHidden }) => {
+const Banner: FC<Props> = ({ children, isShown = false, styles, className = '', isHidden }) => {
   const ref = useRef<HTMLDivElement>()
 
   if (isHidden) return null

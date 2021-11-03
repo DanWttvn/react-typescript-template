@@ -6,7 +6,7 @@ export interface Props extends BaseProps {
   onClose?: () => void
 }
 
-const Modal: FC<Props> = ({ children, styles, onClose, isHidden, className }) => {
+const Modal: FC<Props> = ({ children, styles, onClose, isHidden, className = '' }) => {
   if (isHidden) return null
 
   return (

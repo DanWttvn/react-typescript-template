@@ -6,10 +6,10 @@ export interface Props extends TextProps {
   to: string
 }
 
-const RouteLink: FC<Props> = ({ children, to, weight = 'bold', color, styles, size = 'm', isHidden }) => {
+const RouteLink: FC<Props> = ({ children, to, weight = 'bold', color, styles, size = 'm', className = '', isHidden }) => {
   if (isHidden) return null
 
-  return <Styled to={to} color={color} size={size} styles={styles} weight={weight}>{children}</Styled>
+  return <Styled to={to} color={color} size={size} styles={styles} weight={weight} className={className}>{children}</Styled>
 }
 
 export default RouteLink

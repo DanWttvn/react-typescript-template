@@ -7,7 +7,7 @@ export interface Props extends BaseProps {
   handleSubmit: (data: any) => void
 }
 
-const Form: FC<Props> = ({ children, handleSubmit, isFullWidth, isHidden, styles }) => {
+const Form: FC<Props> = ({ children, handleSubmit, isFullWidth, isHidden, className = '', styles }) => {
   const { register, handleSubmit: handleFormSubmit } = useForm()
 
   const inputs = Children.map(children, (x: ReactElement) => {
@@ -19,7 +19,7 @@ const Form: FC<Props> = ({ children, handleSubmit, isFullWidth, isHidden, styles
   if (isHidden) return null
 
   return (
-    <Styled onSubmit={handleFormSubmit(handleSubmit)} isFullWidth={isFullWidth} styles={styles}>
+    <Styled onSubmit={handleFormSubmit(handleSubmit)} isFullWidth={isFullWidth} styles={styles} className={className}>
       {inputs}
     </Styled>
   )
