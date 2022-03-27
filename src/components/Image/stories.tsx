@@ -1,20 +1,21 @@
 import type { Meta, Story } from '@storybook/react'
 
-import Button from '.'
+import Image from '.'
 import type { Props } from '.'
 
 import withPadding from '../../storybook/decorators/withPadding'
 
 export default {
-  component: Button,
+  component: Image,
   decorators: [withPadding()],
-  title: 'General/Button',
+  title: 'General/Image',
 } as Meta
 
-const Template: Story<Props> = (args) => <Button {...args} />
+const Template: Story<Props> = (args) => <Image {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  children: 'Button label',
-  variant: 'A',
+  children: 'Image children',
+  src: 'https://picsum.photos/300/200',
+  hasOverlay: false
 }

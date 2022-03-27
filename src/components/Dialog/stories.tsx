@@ -1,20 +1,20 @@
 import type { Meta, Story } from '@storybook/react'
 
-import Button from '.'
+import Dialog from '.'
 import type { Props } from '.'
 
 import withPadding from '../../storybook/decorators/withPadding'
 
 export default {
-  component: Button,
+  component: Dialog,
   decorators: [withPadding()],
-  title: 'General/Button',
+  title: 'General/Dialog',
 } as Meta
 
-const Template: Story<Props> = (args) => <Button {...args} />
+const Template: Story<Props> = (args) => <Dialog {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  children: 'Button label',
-  variant: 'A',
+  children: 'Dialog children',
+  onClose: () => alert('closed')
 }

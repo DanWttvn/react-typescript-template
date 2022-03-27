@@ -1,20 +1,19 @@
 import type { Meta, Story } from '@storybook/react'
 
-import Button from '.'
+import Loader from '.'
 import type { Props } from '.'
 
 import withPadding from '../../storybook/decorators/withPadding'
 
 export default {
-  component: Button,
+  component: Loader,
   decorators: [withPadding()],
-  title: 'General/Button',
+  title: 'General/Loader',
 } as Meta
 
-const Template: Story<Props> = (args) => <Button {...args} />
+const Template: Story<Props> = (args) => <Loader {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  children: 'Button label',
-  variant: 'A',
+  isHidden: false,
 }

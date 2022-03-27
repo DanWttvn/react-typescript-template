@@ -1,20 +1,20 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from '@storybook/react'
 
-import Banner from ".";
-import type { Props } from ".";
+import Banner from '.'
+import type { Props } from '.'
 
-import withPadding from "../../storybook/decorators/withPadding";
+import withPadding from '../../storybook/decorators/withPadding'
 
 export default {
   component: Banner,
   decorators: [withPadding()],
-  title: "General/Banner",
-} as Meta;
+  title: 'General/Banner',
+} as Meta
 
-const Template: Story<Props> = (args) => <Banner {...args} />;
+const Template: Story<Props> = (args) => <Banner {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
-  children: "Banner children",
+  children: 'Banner children',
   isShown: true,
-};
+}
